@@ -1,0 +1,78 @@
+/* Loader.css */
+
+body, html {
+  margin: 0;
+}
+
+/* Loader wrapper */
+#wrapper {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  z-index: 9999;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spinner container */
+.spinner-square {
+  display: flex;
+  flex-direction: row;
+  width: 90px;
+  height: 120px;
+}
+
+/* Square bars */
+.spinner-square > .square {
+  width: 14px;
+  height: 80px;
+  margin: auto 5px;
+  border-radius: 4px;
+  background-color: var(--loader-color);
+}
+
+/* Animation timing for staggered effect */
+.square-1 {
+  animation: square-anim 1200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s infinite;
+}
+.square-2 {
+  animation: square-anim 1200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 200ms infinite;
+}
+.square-3 {
+  animation: square-anim 1200ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms infinite;
+}
+
+/* Keyframes for bouncing bars */
+@keyframes square-anim {
+  0% {
+    height: 40px;
+    background-color: var(--loader-color);
+  }
+  40% {
+    height: 100px;
+    background-color: var(--loader-active);
+  }
+  80%, 100% {
+    height: 40px;
+    background-color: var(--loader-color);
+  }
+}
+
+/* Light mode */
+:root {
+  --loader-color: #666;
+  --loader-active: blue;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --loader-color: #aaa;
+    --loader-active: #7c7cff;
+  }
+}
