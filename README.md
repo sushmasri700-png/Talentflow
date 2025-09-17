@@ -9,7 +9,7 @@ Deployed seamlessly on *Vercel*.
 
 ## 🚀 Live Demo
 
-🔗 [Visit TalentFlow on Vercel](https://tanlentflow.vercel.app/)
+🔗 [Visit TalentFlow on Vercel](https://talentflowhr.vercel.app/)
 
 ---
 
@@ -69,7 +69,7 @@ Follow these steps to set up *TalentFlow* locally:
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/sushmasri700-png/Tanlentflow.git
+git clone https://github.com/sushmasri700-png/Talentflow.git
 cd TalentFlow
 npm install
 npm run dev
